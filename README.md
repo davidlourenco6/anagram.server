@@ -1,6 +1,6 @@
 # Anagram Server - Backend
 
-This repository contains the backend implementation of the Nim Game, built with Spring Boot, Kotlin, and Redis.
+This repository contains the backend implementation of the Anagram Server, built with Spring Boot, Kotlin, and Redis.
 
 ## Getting Started
 
@@ -42,12 +42,12 @@ To get started, follow these simple steps:
 3. Explore Endpoints: Start exploring CRUD endpoints available in the collection. Each request is thoroughly documented with descriptions, headers, and example payloads in openAPI.
 The collection is organized into different requests for functionality. Here's provided CRUD operations:
 
-- AddAnagrams
-- AddAnagram
+- addAnagrams
+- addAnagram
 - ensureAnagrams
 - fetchAnagrams
 
-[NimGameServer Collection](./postman/anagram-server.postman_collection.json)
+[AnagramServer Collection](./postman/anagram-server.postman_collection.json)
 
 ## Code Coverage Evidences (run tests with coverage)
 ![img.png](img.png)
