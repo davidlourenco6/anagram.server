@@ -1,0 +1,110 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Anagram Server OpenAPI ",
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080",
+      "description": "local"
+    }
+  ],
+  "paths": {
+    "/anagram-game/v1/anagrams": {
+      "post": {
+        "tags": [
+          "anagram-server-controller"
+        ],
+        "summary": "Add Anagrams to the Data Structure",
+        "description": "Add Anagrams to the Data Structure with the parameters passed on body.",
+        "operationId": "addAnagrams",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully added."
+          }
+        }
+      }
+    },
+    "/anagram-game/v1/anagram": {
+      "post": {
+        "tags": [
+          "anagram-server-controller"
+        ],
+        "summary": "Add Anagram to the Data Structure",
+        "description": "Add Anagram to the Data Structure with the parameters passed on body.",
+        "operationId": "addAnagram",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully added."
+          }
+        }
+      }
+    },
+    "/anagram-game/v1/anagram-check/{anagram1}/{anagram2}": {
+      "get": {
+        "tags": [
+          "anagram-server-controller"
+        ],
+        "summary": "Check if two strings are anagrams",
+        "description": "Check if two strings passed as path variables are anagrams.",
+        "operationId": "ensureAnagrams",
+        "responses": {
+          "200": {
+            "description": "Successfully added.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/anagram-game/v1/anagram-list/{anagram1}": {
+      "get": {
+        "tags": [
+          "anagram-server-controller"
+        ],
+        "summary": "Check if there are anagrams in Data Structure and Return it",
+        "description": "Check if the string passed as path variable has anagrams in Data Structure and return it.",
+        "operationId": "ensureAnagrams",
+        "responses": {
+          "200": {
+            "description": "Successfully added.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": ["string"]
+                }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+}

@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "41987e4b-f856-4972-9fc8-f654da1b967f",
+		"name": "anagram-server",
+		"description": "This collection aims to provide pre-prepared requests to test and play Inverse Nim Game",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27768052"
+	},
+	"item": [
+		{
+			"name": "addAnagrams",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    \"abc\",\n    \"cba\"\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/anagram-game/v1/anagrams",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"anagram-game",
+						"v1",
+						"anagrams"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addAnagram",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"word\": \"abc\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/anagram-game/v1/anagram",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"anagram-game",
+						"v1",
+						"anagram"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ensureAnagrams",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/anagram-game/v1/anagram-check/abc/bca",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"anagram-game",
+						"v1",
+						"anagram-check",
+						"abc",
+						"bca"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchAnagrams",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/anagram-game/v1/anagram-list/cba",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"anagram-game",
+						"v1",
+						"anagram-list",
+						"cba"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
