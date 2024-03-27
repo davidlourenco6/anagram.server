@@ -7,7 +7,7 @@ This repository contains the backend implementation of the Anagram Server, built
 1. Clone the repository:
 
     ```
-    git clone https://github.com/davidlourenco6/anaagram.server
+    git clone https://github.com/davidlourenco6/anagram.server
     cd anagram.server
     ```
 
