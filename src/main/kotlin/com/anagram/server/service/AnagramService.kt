@@ -1,6 +1,5 @@
 package com.anagram.server.service
 
-
 interface AnagramService {
 
     /**

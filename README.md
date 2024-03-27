@@ -27,7 +27,7 @@ This repository contains the backend implementation of the Anagram Server, built
 
 Explore the API endpoints accessing recourses/apiDocs/docs.json:
 
-![img_1.png](img_1.png)
+![img_1.png](images/img_1.png)
 
 [ApiDocs File](src/main/resources/apiDocs/docs.json)
 
@@ -50,7 +50,6 @@ The collection is organized into different requests for functionality. Here's pr
 [AnagramServer Collection](./postman/anagram-server.postman_collection.json)
 
 ## Code Coverage Evidences (run tests with coverage)
-![img.png](img.png)
-
+![img_2.png](images/img_2.png)
 
 ---

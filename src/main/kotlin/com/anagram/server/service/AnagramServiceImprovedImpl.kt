@@ -14,8 +14,8 @@ class AnagramServiceImprovedImpl: AnagramService {
             return false
         }
 
-        val freqMap1 = buildFrequencyMap(text1) // Build frequency map for text1
-        val freqMap2 = buildFrequencyMap(text2) // Build frequency map for text2
+        val freqMap1 = buildFrequencyMap(text1)
+        val freqMap2 = buildFrequencyMap(text2)
 
         return freqMap1 == freqMap2 // Compare frequency maps
     }
@@ -62,7 +62,6 @@ class AnagramServiceImprovedImpl: AnagramService {
                 charCount[i]--
             }
         }
-
         return String(sortedChars)
     }
 

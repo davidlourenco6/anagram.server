@@ -13,10 +13,10 @@ class AnagramServiceImprovedImplTest {
     }
 
     @Test
-    fun givenGameState_whenStartGame_thenReturnNewGameState() {
+    fun givenAnagrams_whenAreAnagrams_shouldReturnTrue() {
 
-        val a = "aba"
-        val b = "aab"
+        val a = "angel"
+        val b = "glean"
 
         val result = anagramService.areAnagrams(a,b)
 
@@ -24,7 +24,29 @@ class AnagramServiceImprovedImplTest {
     }
 
     @Test
-    fun givenGameState_whenRestartGame_thenReturnUpdatedGameState() {
+    fun givenAnagrams_whenAreAnagrams_shouldReturnFalse() {
+
+        val a = "angel"
+        val b = "anger"
+
+        val result = anagramService.areAnagrams(a,b)
+
+        assert(!result)
+    }
+
+    @Test
+    fun givenAnagrams_whenAreAnagrams_shouldReturnFalseDueDifferentLength() {
+
+        val a = "angel"
+        val b = "ange"
+
+        val result = anagramService.areAnagrams(a,b)
+
+        assert(!result)
+    }
+
+    @Test
+    fun givenAnagram_whenFindAnagrams_shouldReturnAnagramsList() {
 
         val a = "aba"
         val b = "aab"
@@ -38,7 +60,7 @@ class AnagramServiceImprovedImplTest {
     }
 
     @Test
-    fun givenGameState_whenRestartGame() {
+    fun givenAnagram_whenFindAnagrams_shouldReturnEmptyList() {
 
         val a = "abc"
         val b = "def"
@@ -51,5 +73,18 @@ class AnagramServiceImprovedImplTest {
         assert(result.toList().isEmpty())
     }
 
+    @Test
+    fun givenListOfAnagrams_when_addAnagrams_shouldAddOnDataStructure() {
+        val words = listOf("listen", "silent", "enlist", "tinsel")
+
+        anagramService.addAnagrams(words)
+
+        val result = anagramService.findAnagrams("listen")
+
+        assert(result.contains("listen"))
+        assert(result.contains("silent"))
+        assert(result.contains("enlist"))
+        assert(result.contains("tinsel"))
+    }
 
 }
